@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>JSON Escape Text</title>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    var textareas = document.getElementsByTagName('textarea');
+    var input = textareas[0];
+    var output = textareas[1];
+    textareas[0].onkeyup = function() {
+        output.value = JSON.stringify(input.value);
+    }
+});
+</script>
+<style>
+body {
+    font-family: Helvetica, sans-serif;
+}
+textarea {
+    width: 80%;
+    height: 15em;
+}
+label {
+    display: block;
+    margin: 1em 0;
+}
+</style>
+</head>
+<body>
+
+<h1>JSON Escape Text</h1>
+
+<p>A tool for turning text into an escaped JSON string.</p>
+
+<label for="input">Enter your text here:</label>
+
+<textarea id="input"></textarea>
+
+<label for="output">JSON escaped version:</label>
+
+<textarea id="output"></textarea>
+
+<p><a href="https://github.com/simonw/json-escape-text">Source code</a></p>
+
+</body>
+</html>
