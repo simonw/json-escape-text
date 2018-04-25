@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     var textareas = document.getElementsByTagName('textarea');
     var input = textareas[0];
     var output = textareas[1];
-    textareas[0].onkeyup = function() {
+    input.onkeyup = function() {
         output.value = JSON.stringify(input.value);
     }
 });
